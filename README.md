@@ -1,4 +1,4 @@
-# that-portfolio-v3
+# that-workout-tracker
 Updated portfolio featuring scrum projects and three exemplary homework assignments.
 
 ## User Story
