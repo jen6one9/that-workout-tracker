@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb:/localhost/fitnesstracker", {
+mongoose.connect("mongodb://localhost/fitnesstracker", {
     useNewUrlParser: true,
     useFindAndModify: true
 })
