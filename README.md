@@ -9,7 +9,7 @@ As a user, I want to be able to view create and track daily workouts. I want to 
 
 
 ## Deployed Link
-
+https://jen6one9.github.io/that-workout-tracker/
 
 ## Acknowledgements
 The successful release of this application would not be possible with the candid feedback and support of my tutor, class TA's and cohort peers. 
