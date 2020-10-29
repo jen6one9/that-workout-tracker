@@ -9,17 +9,37 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI ||
-    "mongodb://localhost/fitnesstracker", {
-    useNewUrlParser: true,
-    useFindAndModify: true
-})
 
-var apiroutes = require("./routes/api-routes")
 var htmlroutes = require("./routes/htmlroutes")
-app.use(apiroutes)
+
 app.use(htmlroutes)
 
-app.listen(port, () => {
-    console.log("App running on port 3000!");
-});
+if(process.env.MONGODB_URI){
+    mongoose.connect(process.env.MONGODB_URI,{
+        useNewUrlParser: true,
+        useFindAndModify: true},function(){
+            app.listen(port, () => {
+
+                var apiroutes = require("./routes/api-routes")
+                app.use(apiroutes)
+                console.log("App running on port 3000!");
+                      });
+        })
+}
+else{
+    mongoose.connect
+    ("mongodb://localhost/fitnesstracker", {
+        useNewUrlParser: true,
+        useFindAndModify: true},function(){
+            app.listen(port, () => {
+                var apiroutes = require("./routes/api-routes")
+                app.use(apiroutes)
+                console.log("App running on port 3000!");
+            });
+        })
+}
+
+
+
+
+
