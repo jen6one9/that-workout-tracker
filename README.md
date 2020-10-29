@@ -9,6 +9,7 @@ As a user, I want to be able to view create and track daily workouts. I want to 
 
 
 ## Deployed Link
+https://hidden-lowlands-13217.herokuapp.com/
 https://jen6one9.github.io/that-workout-tracker/
 
 ## Acknowledgements
