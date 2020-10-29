@@ -32,7 +32,7 @@ routes.get("/api/workouts", function (req, res) {
 })
 
 routes.get("/api/workouts/range", function (req, res) {
-    Workout.find({}).limit(15)
+    db.find({}).limit(15)
         .then(dbWorkouts => {
             console.log(dbWorkouts)
             res.json(dbWorkouts);
