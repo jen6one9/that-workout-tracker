@@ -15,7 +15,10 @@ routes.put("/api/workouts/:id", function (req, res) {
             console.log("put route", records)
             res.json(records)
         })
-})
+        .catch(error=>{
+            res.json(error)
+        });
+});
 routes.post("/api/workouts", function (req, res) {
     db.create(req.body)
         .then(function (records) {
